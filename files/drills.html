@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Math Worksheets by Math-Drills</title>
+  <link rel="stylesheet" type="text/css" href="/css/drills.css">
+
+  <meta name="description" content="Math-Drills includes over 58 thousand free math worksheets for students in elementary and middle school. Our easy to print math worksheets are free to use in your school or home.">
+  <meta name="keywords" content="Math Drills,math worksheets,Drills Math,student drills">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon.png">
+  <!--  <link rel="manifest" href="/site.009.webmanifest">
+    <link rel="canonical" href="https://math-drills.com">-->
+
+  <div class="header">
+    <div class="iconwhite size100 imdgradbg">
+      <h1>
+        <span class="maintitle" itemprop="name">Free Math Worksheets</span><br><span class="subtitle">by Math-Drills</span>		</h1>
+    </div>
+  </div>
+</head>
+
+</head>
+
+<body>
+<!--  style="background: #4d84c8" -->
+<div class="p-0 flex flex-col justify-center bg-cool-gray-50 overflow-hidden" md="items-center" print="p-0 m-0 bg-white" >
+  <div style="width: 70%" md="flex">
+    <div class="overflow-hidden">
+      <div data-v-949c8aa8="" class="singlePaper__content" >
+        <div class="h-24 overflow-hidden flex items-center justify-between break-inside-avoid">
+          <div class="flex-1"><h1 class="text-xl font-bold">加法减法练习题</h1>
+            <div style="margin: 20px;" class="flex items-center justify-between text-sm mt-4">
+              <div class="flex-1">班级：__________</div>
+              <div class="flex-1">姓名：__________</div>
+              <div class="flex-1">
+                <label>日期:
+                  <input class="input" type="text" id="year" maxlength="4" style="width: 2.1em;">年
+                  <input class="input" type="text" id="month" maxlength="2" style="width: 1.1em;">月
+                  <input class="input" type="text" id="day" maxlength="2" style="width: 1.1em;">日
+                </label>
+              </div>
+              <div class="flex-1">得分：__________</div>
+            </div>
+          </div>
+        </div>
+
+        <!--class="exercise-container hidden"-->
+        <div id="exercises" class="exercise-container flex flex-wrap" > </div>
+        <div id="answers" class="answers hidden"></div>
+
+        <div id="stats" class="hidden">
+          <p>统计: 正确 <span id="correct-count">0</span> 题，错误 <span id="wrong-count">0</span> 题</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  style="background: #4d84c8" -->
+    <div class="w-full block" md="w-64 ml-6" style="width: 35%">
+      <div class="constraint-section">
+        <label class="constraint-title">难度设置</label>
+        <input type="range" min="1" max="5" value="2" class="difficulty-slider" id="difficultySlider">
+        <div class="difficulty-labels">
+          <span>简单</span>
+          <span>较易</span>
+          <span>中等</span>
+          <span>较难</span>
+          <span>困难</span>
+        </div>
+      </div>
+
+      <div class="constraint-section">
+        <div class="constraint-title">数值范围设置</div>
+        <label>限制 #1 范围: <input type="checkbox" id="limit1" checked></label>
+        <label>数字范围 #1:
+          <select id="range1">
+            <option value="0-9">0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50" selected>10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>限制 #2 范围: <input type="checkbox" id="limit2" checked></label>
+        <label>数字范围 #2:
+          <select id="range2">
+            <option value="0-9">0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50" selected>10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>限制 #3 范围: <input type="checkbox" id="limit3"></label>
+        <label>数字范围 #3:
+          <select id="range3">
+            <option value="0-9" selected>0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50">10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>限制 #4 范围: <input type="checkbox" id="limit4"></label>
+        <label>数字范围 #4:
+          <select id="range4">
+            <option value="0-9" selected>0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50">10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="constraint-section">
+        <div class="constraint-title">运算类型与约束</div>
+        <div>
+          <label><input type="checkbox" id="add" checked> 加法</label>
+          <label><input type="checkbox" id="add-carry"> 需要进位</label>
+          <!--<label><input type="checkbox" id="add-no-carry"> 不进位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="subtract"> 减法</label>
+          <label><input type="checkbox" id="subtract-borrow"> 需要借位</label>
+          <!--<label><input type="checkbox" id="subtract-no-borrow"> 不借位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="multiply"> 乘法</label>
+          <label><input type="checkbox" id="multiply-carry"> 需要进位</label>
+          <!--<label><input type="checkbox" id="multiply-no-carry"> 不进位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="divide"> 除法</label>
+          <label><input type="checkbox" id="divide-exact"> 整除</label>
+        </div>
+        <!--          <div>
+                    <label><input type="checkbox" id="moveTerms"> 需要移项计算</label>
+                  </div>-->
+      </div>
+
+
+      <div class="constraint-section">
+        <div class="constraint-title">习题结构设置</div>
+        <label>填空位置:
+          <select id="blank" onchange="updateDisabledRanges()">
+            <option value="#1">Position 1</option>
+            <option value="#2">Position 2</option>
+            <option value="#3">Position 3</option>
+            <option value="#4">Position 4</option>
+            <!--          <option value="op1">op1</option>
+                          <option value="op2">op2</option>
+                          <option value="op3">op3</option>-->
+          </select>
+        </label>
+        <label class="hidden">显示 op2 和 #3:
+          <input type="checkbox" id="showOp2" checked>
+        </label>
+        <label class="hidden">显示 op3 和 #4:
+          <input type="checkbox" id="showOp3"> </label>
+      </div>
+
+      <button style="width: 200px; margin: 10px" onclick="generateExercises()">生成习题</button>
+      <button style="width: 200px; margin: 10px" onclick="printToPDF()">打印</button>
+
+      <button style="width: 200px; margin: 10px" onclick="startTimer()">开始计时</button>
+
+      <span id="timer">已过: 0秒</span>
+      <button style="width: 200px; margin: 10px" onclick="stopTimerAndGrade()">停计时并批改</button>
+      <button style="width: 200px; margin: 10px" id="autoFillButton" onclick="autoFillAnswers()">自动答题</button>
+
+      <label class="hidden"><input type="checkbox" id="randomizeAnswers">要错答率</label>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="text-sm text-center pt-10 pb-4 text-black">Copyright © 2005-2025 <a href="https://www.muyi.dev/" class="text-blue-400" hover="underline" target="_blank"> MuYi.dev </a></div>
+<div class="text-sm text-center text-black">
+  You may use the math worksheets on this website according to our Terms of Use to help students learn math.
+</div>
+
+<div class="footer hidden">
+  <p>评分: <span id="score">0</span> / 100</p>
+  <div class="stars" id="stars">
+    评价：
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+  </div>
+  <div id="comment" class="comment"></div>
+</div>
+<script src="/js/math.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Math Worksheets by Math-Drills</title>
+  <link rel="stylesheet" type="text/css" href="/css/drills.css">
+
+  <meta name="description" content="Math-Drills includes over 58 thousand free math worksheets for students in elementary and middle school. Our easy to print math worksheets are free to use in your school or home.">
+
+  <meta name="keywords" content="math worksheets,student drills, math worksheets, math drills, students, teachers, parents">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon.png">
+
+  <!-- 顶部导航 -->
+  <div class="header">
+    <div class="logo">
+      <p class="pcenter">
+        <a href="#" aria-label="Home Page" title="Home Page">
+          <!--<img class="iconwhite size100 imdgradbg" src="icon.png" alt="#"></img>-->
+<!--          <svg class="iconwhite size100 imdgradbg"> <use xlink:href="/includes/symbol-defs.006.svg#icon-math-drills-logo"> </use>
+          </svg>-->
+        </a>
+      </p>
+    </div>
+
+    <div class="title">
+      <h1>
+        <span class="maintitle" itemprop="name">Free Math Worksheets</span><br><span class="subtitle">Improving your math skills</span>	</h1>
+    </div>
+
+    <div class="searchform"> </div>
+  </div>
+
+  <div class="navmenu">
+    <span > </span>
+    <a style="text-decoration: none; font-family: '仿宋', FangSong, serif; font-size:24px" href="./index.html" title="Math Worksheet Topics">
+      <span>Home</span>
+    </a>
+    <a style="text-decoration: none; font-family: '仿宋', FangSong, serif; font-size:24px" href="./files/faq.html" title="Math-Drills News and Updates">
+      <span>FAQs</span>
+    </a>
+
+    <a style="text-decoration: none; font-family: '仿宋', FangSong, serif; font-size:24px" href="./files/about.html" title="Recently Added Math Worksheets">
+      <span>About</span>
+    </a>
+  </div>
+</head>
+
+<body>
+
+<div class="p-0 flex flex-col md:my-12 justify-center bg-cool-gray-50 overflow-hidden" md="items-center" print="p-0 m-0 bg-white" >
+  <div style="width: 70%" md="flex">
+    <div class="overflow-hidden">
+      <div data-v-949c8aa8="" class="singlePaper__content" >
+        <div class="h-24 overflow-hidden flex items-center justify-between break-inside-avoid">
+          <div class="flex-1"><h1 class="text-xl font-bold"> </h1>
+            <div style="margin: 20px;" class="flex items-center justify-between text-sm mt-4">
+              <div class="flex-1">Grade：__________</div>
+              <div class="flex-1">Name：__________</div>
+              <div class="flex-1">
+                <label>Date:
+                  <input class="input" type="text" id="year" maxlength="4" style="width: 2.1em;">-
+                  <input class="input" type="text" id="month" maxlength="2" style="width: 1.1em;">-
+                  <input class="input" type="text" id="day" maxlength="2" style="width: 1.1em;">
+                </label>
+              </div>
+              <div class="flex-1">Score：__________</div>
+            </div>
+          </div>
+        </div>
+
+        <!--class="exercise-container hidden"-->
+        <div id="exercises" class="exercise-container flex flex-wrap"></div>
+        <div id="answers" class="answers hidden"></div>
+
+        <div id="stats" class="hidden">
+          <p>Total: Correct <span id="correct-count">0</span> Items，Fail <span id="wrong-count">0</span> Items</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-full block" md="w-64 ml-6" style="width: 30%">
+      <div class="constraint-section">
+        <label class="constraint-title">Difficulty settings</label>
+        <input aria-label="" type="range" min="1" max="5" value="2" class="difficulty-slider" id="difficultySlider">
+        <div class="difficulty-labels">
+          <span>Easy</span>
+          <span> </span>
+          <span>Medium</span>
+          <span> </span>
+          <span>Tough</span>
+        </div>
+      </div>
+
+      <div class="constraint-section">
+        <div class="constraint-title">Numeric range setting</div>
+        <label>Limit #1 Range: <input type="checkbox" id="limit1" checked></label>
+        <label>Numeric Range #1:
+          <select id="range1">
+            <option value="0-9">0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50" selected>10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>Limit #2 Range: <input type="checkbox" id="limit2" checked></label>
+        <label>Numeric Range #2:
+          <select id="range2">
+            <option value="0-9">0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50" selected>10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>Limit #3 Range: <input type="checkbox" id="limit3"></label>
+        <label>Numeric Range #3:
+          <select id="range3">
+            <option value="0-9" selected>0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50">10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+        <br>
+        <label>Limit #4 Range: <input type="checkbox" id="limit4"></label>
+        <label>Numeric Range #4:
+          <select id="range4">
+            <option value="0-9" selected>0-9</option>
+            <option value="2-9">2-9</option>
+            <option value="10-50">10-50</option>
+            <option value="51-99">51-99</option>
+            <option value="2-99">2-99</option>
+            <option value="5-999">5-999</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="constraint-section">
+        <div class="constraint-title">Operation and Constraints</div>
+        <div>
+          <label><input type="checkbox" id="add" checked> Addition</label>
+          <label><input type="checkbox" id="add-carry"> Carry Required</label>
+          <!--<label><input type="checkbox" id="add-no-carry"> 不进位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="subtract"> Subtraction</label>
+          <label><input type="checkbox" id="subtract-borrow"> Carry Required</label>
+          <!--<label><input type="checkbox" id="subtract-no-borrow"> 不借位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="multiply"> Multiplication</label>
+          <label><input type="checkbox" id="multiply-carry"> Carry Required</label>
+          <!--<label><input type="checkbox" id="multiply-no-carry"> 不进位</label>-->
+        </div>
+        <div>
+          <label><input type="checkbox" id="divide"> Division</label>
+          <label><input type="checkbox" id="divide-exact"> Integer</label>
+        </div>
+        <!--          <div>
+                    <label><input type="checkbox" id="moveTerms"> 需要移项计算</label>
+                  </div>-->
+      </div>
+
+
+      <div class="constraint-section">
+        <div class="constraint-title">Exercise Structure Setting</div>
+        <label>Answer Position:
+          <select id="blank" onchange="updateDisabledRanges()">
+            <option value="#1">Premade 1</option>
+            <option value="#2">Premade 2</option>
+            <option value="#3">Premade 3</option>
+            <option value="#4">Premade 4</option>
+            <!--          <option value="op1">op1</option>
+                          <option value="op2">op2</option>
+                          <option value="op3">op3</option>-->
+          </select>
+        </label>
+        <label class="hidden">显示 op2 和 #3:
+          <input type="checkbox" id="showOp2" checked>
+        </label>
+        <label class="hidden">显示 op3 和 #4:
+          <input type="checkbox" id="showOp3"> </label>
+      </div>
+
+      <button style="width: 45%; height: 36px; margin: 5px; white-space: nowrap" onclick="generateExercises()">Update Worksheet</button>
+      <button style="width: 45%; height: 36px; margin: 5px" onclick="printToPDF()">Print</button>
+
+      <button style="width: 45%; height: 36px; margin: 10px" onclick="startTimer()">Start</button>
+
+      <span style="width: 45%; height: 36px; margin: 5px; text-overflow: ellipsis" id="timer">Countdown: 0 S</span>
+      <button style="width: 45%; height: 36px; margin: 5px; text-overflow: ellipsis" onclick="stopTimerAndGrade()">Stop</button>
+      <button style="width: 45%; height: 36px; margin: 5px" id="autoFillButton" onclick="autoFillAnswers()">Answer</button>
+
+      <label class="hidden"><input type="checkbox" id="randomizeAnswers">要错答率</label>
+    </div>
+  </div>
+</div>
+
+<div class="h-full w-full">
+  <div class="py-32 overflow-hidden" style="background: #e5e7eb80">
+    <div class="mx-auto overflow-hidden text-center">
+      <h2 class="text-2xl text-blue-400" style="font-family: 'Arial', sans-serif">Supporting Student Learning with Free Math Worksheets by Math Drills</h2>
+
+      <h3 style="font-family: '仿宋', FangSong, serif; font-size: x-large; text-align: start;padding-left: 50px; padding-right: 50px">
+        Math drills believes that education should be accessible to all children despite their socioeconomic situation or any other factors.
+        All the math worksheets on math drills have been free-to-use with students learning math.
+        Our website works well on any device and worksheets can be printed or used on a screen.
+      </h3>
+
+      <h3  style="font-family: '仿宋', FangSong, serif; font-size: x-large; text-align: start;padding-left: 50px; padding-right: 50px">
+        Math drills worksheets are also used in special education, adult education, tutoring, colleges, high schools, prisons and a variety of other situations.
+        Special education teachers especially like that we break down math skills and provide large-print options.
+        Adult learners appreciate the simple uncluttered format that our worksheets offer. Tutors use our math worksheets to reduce their costs and focus on student learning.
+        High school, college and university educators sometimes need remedial resources for students to allow them to continue with more advanced topics.</h3>
+
+    </div>
+    </div>
+  </div>
+
+
+
+<div class="text-xl text-center pt-10 pb-4 text-black">Copyright © 2005-2025 <a href="https://www.muyi.dev/" class="text-blue-400" hover="underline" target="_blank"> MuYi.dev </a></div>
+<div class="text-xl text-center text-black">
+  You may use the math worksheets on this website according to our Terms of Use to help students learn math.
+</div>
+
+<div class="footer hidden">
+  <p>评分: <span id="score">0</span> / 100</p>
+  <div class="stars" id="stars">
+    评价：
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+    <span class="star empty">☆</span>
+  </div>
+  <div id="comment" class="comment"></div>
+</div>
+<script src="/js/math.js"></script>
+</body>
+</html>
