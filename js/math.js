@@ -922,13 +922,40 @@ function autoFillAnswers() {
   });
 }
 
-// 打印为PDF
-function printToPDF() {
-  // 显示答案（正常方向）
-  document.getElementById('answers').classList.add('show-answers');
+function mPrint(elementId) {
+  // 需要打印的局部区域赋予"print-wrap"的id
+  let el = document.getElementById(elementId);
+  let doc = document;
+  let body = doc.body || doc.getElementsByTagName("body")[0];
+  let printId = "print-" + Date.now();
 
-  // 打印
-  window.print();
+  // 创建无副作用的打印容器(因不确定页面的打印元素有无其它样式)
+  let content = doc.createElement("div");
+  content.id = printId;
+
+  // 样式控制与打印无关的元素隐藏
+  let style = doc.createElement("style");
+  style.innerHTML =
+    "body>#" +
+    printId +
+    "{display:none}@media print{body>:not(#" +
+    printId +
+    "){display:none !important}body>#" +
+    printId +
+    "{display:block;padding-top:1px}}";
+
+  content.innerHTML = el.outerHTML;
+   //console.log("el.outerHTML", el.outerHTML);
+  body.appendChild(style);
+
+  // 与style元素设置的样式相配合
+  // 把打印内容的元素添加到body(作为body的子元素，可用body的子选择器 '>' 控制打印样式)
+  body.appendChild(content);
+  setTimeout(() => {
+    window.print();
+    body.removeChild(content);
+    body.removeChild(style);
+  }, 20);
 }
 
 // 设置难度预设
