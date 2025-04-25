@@ -1931,10 +1931,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
-  width: 692px;
-  height: 1100px;
+  width: 700px;
+  height: 1000px;
   overflow: hidden;
-  border-width: 1px;
+  border-width: 2px;
   --un-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--un-border-opacity));
   border-style: dashed;
@@ -8015,3 +8015,5 @@ h1 .subtitle {font-weight: 600;  font-size: 32px; color: #FED833;}
   .navmenu div span, .navmenu a span {display: none;}
   .navmenu div svg, .navmenu a svg {flex: 0 0 25px; width: 25px; height: 25px;}
 }
+
+@page { margin: 0; }
